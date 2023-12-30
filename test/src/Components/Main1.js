@@ -8,7 +8,7 @@ const myObj = {
     city: "Peradeniya"
 }
 
-function Main1({children,name,city,age})
+function Main1({name,city,age})
     {
         //destruct object
         //const {city} = myObj;
@@ -24,7 +24,7 @@ function Main1({children,name,city,age})
                 
             </ul>
 
-            {children}
+
 
         </div>)
     }
