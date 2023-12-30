@@ -4,14 +4,16 @@ export const myData = [
       name: "arosh",
       city: "kandy",
       position: "dev",
-      age: "97"
+      age: "97",
+      image: "https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/41uc8DXJr+L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       id:1232,
       name: "saman",
       city: "colombo",
       position: "app dev",
-      age: "27"
+      age: "27",
+      image: "https://thumbs.dreamstime.com/z/beautiful-landscape-sunrise-kirkjufellsfoss-waterfall-kirkjufell-mountain-iceland-europe-161202079.jpg"
     },
     {
       id:1233,

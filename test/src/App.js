@@ -4,58 +4,30 @@ import Main1 from './Components/Main1';
 //import myData from './Data/myData';
 import { myData } from './Data/myData';
 
-const NewBlock = ()=>{
-  return(
-  <>
-        {myData.map(({name,city,age,id})=>{
-        return <Main1 key = {id} name = {name} city = {city} age = {age}/>;
-      
-      })}
-  
-  </>)
-}
-
 
 
 
 
 function App() {
+  const mainBlock = myData.map(({name,city,age,id,image})=>{
+    return <Main1 key = {id} name = {name} city = {city} age = {age} image = {image}/>;
+  
+  });
+
   return (
-    <>
-    <div>
-      <h1>hello</h1>
-    </div>
-      <p>world</p>
 
-      <Main1 />
-      <Main1 name = "Jaye" city = "seeduwa" age = "34">
-        <p>fix</p>
+    <div className = "mainC">
+      <h5>Aroshana Dissanayake</h5>
+  
+  <div className = "mainContainer">
+    {mainBlock}
 
-      </Main1>
-      <Main1 name = "Bandara" city = "badulla" age = "26" />
-      <Main1 name = "Vimal" city = "dadulla" age = "20" />
-      
-      {myData.map((ele)=>{
-        return <Main1 name = {ele.name} city = {ele.city} age = {ele.age}/>;
-      
-      })}
+  </div>
+  </div>
 
-      {myData.map(({name,city,age},index)=>{
-        return <Main1 key = {index} name = {name} city = {city} age = {age}/>;
-      
-      })}
-
-      {myData.map(({name,city,age,id})=>{
-        return <Main1 key = {id} name = {name} city = {city} age = {age}/>;
-      
-      })}
-
-      <NewBlock />
-
-
-    </>
- 
   );
+
 }
+
 
 export default App;
