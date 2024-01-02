@@ -13,41 +13,35 @@ import {useState} from "react";
 function App() {
 
   //let myVar = "Aroshana";
-  const [myVar, setMyVar] = useState({ name: "arosh",
-  city: "kandy",
-  position: "dev",})
-
-  const [myDataState,setMyDataState] = useState(myData);
-  const [inputVal,setInputVal]=useState("");
+  const [inputVal,setInputVal]=useState(0);
 
   const clickHandle = ()=>{
   //myVar = "Sasanka";
-  setMyVar({...myVar,city:"Anamaduwa",name:"Gemba"});
 
-  setMyDataState([...myDataState,{
-    id:1236,
-    name: "bindu",
-    city: "trinco",
-    position: "data dev",
-    age: "27",
-    image: "https://thumbs.dreamstime.com/z/beautiful-landscape-sunrise-kirkjufellsfoss-waterfall-kirkjufell-mountain-iceland-europe-161202079.jpg"
-  },])
+
   
   }
 
 
-  //console.log(myDataState);
+console.log(inputVal);
 
 
-  const mainBlock = myDataState.map(({name,city,age,id,image},index)=>{
+  const mainBlock = myData.map(({name,city,age,id,image},index)=>{
     return <Main1 key = {id+index} name = {name} city = {city} age = {age} image = {image}/>;
   
   });
 
+  const inputHandleChange = (event,data)=>{
+    event.preventDefault();
+    console.log(data);
+    setInputVal(event.target.value);
+  }
+
   return (
 
     <div className = "mainC">
-      <h5>{myVar.name}</h5>
+      <h5>jjj</h5>
+
   
   <div className = "mainContainer">
     {mainBlock}
@@ -66,14 +60,8 @@ function App() {
     click Me
     </button>
 
-    <br/>  <br/>
-    <input style={
-      {
-        border:'1px solid red',
-        fontSize: '14px',
-        padding:'7px'
-      }
-    } type ="text"/>
+
+
 
     
   </div>
