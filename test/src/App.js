@@ -17,6 +17,20 @@ function App() {
 
   const clickHandle = ()=>{
   //myVar = "Sasanka";
+  setTimeout(()=>{
+    console.log("I am Clicked");
+    setInputVal((pre)=>{
+      if(pre<1){
+        return pre + 1;
+      }else if(pre<2){
+        return pre+3;
+      }else{
+        return pre+2;
+      }
+    });
+  },2000);
+
+  
 
 
   
@@ -40,7 +54,7 @@ console.log(inputVal);
   return (
 
     <div className = "mainC">
-      <h5>jjj</h5>
+      <h5>{inputVal}</h5>
 
   
   <div className = "mainContainer">
