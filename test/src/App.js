@@ -1,7 +1,8 @@
 
 import './App.css';
+import Header from './Components/Header';
 import Unit from './Components/Unit';
-import {useState} from "react";
+import {Fragment, useState} from "react";
 
 const App = ()=>{
 
@@ -21,7 +22,11 @@ const App = ()=>{
   const [myData, setMydata] = useState([]);
 
 console.log(myData);
-  return (<div className="main_cont">
+  return (
+
+  <Fragment>
+  <Header/>
+  <div className="main_cont">
   <div className = "main_left">
     {/*<input type = "text" value = {imgUrl} onChange = {(e)=>{e.preventDefault() 
       setImgUrl(e.target.value)}}/>
@@ -116,6 +121,8 @@ console.log(myData);
 
   </div>
   </div>
+  </Fragment>
  )
   }
+
 export default App;

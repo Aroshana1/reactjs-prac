@@ -1,3 +1,60 @@
+.head_container{
+  padding:20px;
+  margin-bottom:100px;
+  background-color: rgb(221, 162, 184);
+  width:100%;
+  position:sticky;
+  top:0;
+  left:0;
+  z-index:100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.head_container nav{
+  position: relative;
+}
+
+.head_container nav ul{
+  position:absolute;
+  top: -39px;;
+  right: -20px;
+  padding:20px;
+  height:100vh;
+  background-color: rgb(250, 84, 106);
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.head_container nav ul li{
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 400ms ease-in;
+}
+
+.head_container nav ul li:hover{
+  color: red;
+
+
+}
+
+.head_container .headerclose{
+  cursor:pointer;
+}
+
+.head_container .headermenu{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  margin: 50px;
+  padding: 12px;
+}
+
 .mainContainer{
   width:90%;
   display: grid;
