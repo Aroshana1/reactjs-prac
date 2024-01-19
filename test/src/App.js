@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Components/Header';
 import Unit from './Components/Unit';
 import {Fragment, useState} from "react";
+import { useEffect } from 'react';
 
 const App = ()=>{
 
@@ -21,11 +22,15 @@ const App = ()=>{
 
   const [myData, setMydata] = useState([]);
 
+  useEffect(()=>{
+    console.log('use effect calling...')
+  });
+
 console.log(myData);
   return (
 
   <Fragment>
-  <Header/>
+
   <div className="main_cont">
   <div className = "main_left">
     {/*<input type = "text" value = {imgUrl} onChange = {(e)=>{e.preventDefault() 
