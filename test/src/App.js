@@ -21,10 +21,27 @@ const App = ()=>{
   })
 
   const [myData, setMydata] = useState([]);
+  const[windowWidth,setWindowWidth] =  useState(window.innerWidth);
 
   useEffect(()=>{
-    console.log('use effect calling...')
-  });
+    const changeWindowWidth = ()=>{
+      setWindowWidth(window.innerWidth);
+
+    };
+
+      
+    
+
+    window.addEventListener("resize",changeWindowWidth);
+
+    console.log("use effet calling...")
+
+    return ()=>{
+      console.log("use effect cleanup...");
+      window.removeEventListener("resize",changeWindowWidth);
+
+    }
+  },[inputDataa.name]);
 
 console.log(myData);
   return (
@@ -32,6 +49,7 @@ console.log(myData);
   <Fragment>
 
   <div className="main_cont">
+    <h2>{windowWidth}</h2>
   <div className = "main_left">
     {/*<input type = "text" value = {imgUrl} onChange = {(e)=>{e.preventDefault() 
       setImgUrl(e.target.value)}}/>
